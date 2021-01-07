@@ -7,3 +7,7 @@ a:link, a:hover, a:visited{
         text-decoration: none;
         color: black;
     }
+
+html{
+    scroll-behavior: smooth;
+}
