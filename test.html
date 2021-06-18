@@ -1,0 +1,55 @@
+<style>
+
+.showMore + input + * {
+ 
+  max-height: 0;
+  /*and eventually delay an overflow:auto; */
+  overflow:hidden;
+  transition: max-height 0.5s, overflow 0s;
+}
+.showMore + input:checked + * { 
+  /* here comes the compromise, set a max-height that would for your usual contents*/
+   max-height: 5em;
+  overflow:auto;
+  transition: max-height 0.5s, overflow 0.5s 0.5s;
+}
+</style>
+
+<div class="showMore" >Heading 1</div>
+<input id="_1" type="checkbox">
+<div>Hidden 1 Hidden 1Hidden 1Hidden 1Hidden 1Hidden 1Hidden 1Hidden 1Hidden 1Hidden 1Hidden 1Hidden 1Hidden 1Hidden 1Hidden 1Hidden 1Hidden 1Hidden 1Hidden 1Hidden 1Hidden 1Hidden 1Hidden 1Hidden 1Hidden 1Hidden 1Hidden 1Hidden 1Hidden 1Hidden 1Hidden 1Hidden 1Hidden 1Hidden 1Hidden 1Hidden 1Hidden 1Hidden 1Hidden 1Hidden 1Hidden 1Hidden 1Hidden 1Hidden 1Hidden 1Hidden 1Hidden 1Hidden 1Hidden 1Hidden 1Hidden 1Hidden 1Hidden 1Hidden 1Hidden 1Hidden 1Hidden 1Hidden 1Hidden 1Hidden 1Hidden 1Hidden 1Hidden 1Hidden 1Hidden 1Hidden 1Hidden 1Hidden 1Hidden 1Hidden 1Hidden 1Hidden 1Hidden 1Hidden 1</div>
+
+<label class="showMore" for="_2">Heading 2</label>
+<input id="_2" type="checkbox">
+<div>Hidden2</div>
+
+<style>
+  #check{
+    display:none;
+  }
+
+  .cajaPrincipal label{
+    background-color: aqua;
+    padding: 5px;
+  }
+
+  .cajaPrincipal div {
+    height: 0;
+    overflow: hidden;
+    transition: all 0.5s linear;
+  }
+
+  .cajaPrincipal #check:checked ~ div{
+    height: 400px;
+  }
+
+</style>
+
+<br><br><br><br><br>
+<div class="cajaPrincipal">
+  <input type="checkbox" id="check">
+  <label for="check">Mostrar/Ocultar</label>
+  <div>
+     Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, hic.
+  </div>
+</div>

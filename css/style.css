@@ -1,12 +1,52 @@
-body{
-        background-color: #f6f6f6;
-        margin-top: 25px;
-    }
+#check1{
+  display: none;
+}
 
-a:link, a:hover, a:visited{
-        text-decoration: none;
-        color: black;
-    }
+.cp1 div {
+  height: 500px;
+  overflow: hidden;
+  color:black;
+  transition: all 1s linear;
+}
+
+.cp1 #check1:checked~div {
+  height: 0;
+  color: white;
+}
+
+
+#check2{
+  display: none;
+}
+
+.cp2 div {
+  height: 1300px;
+  overflow: hidden;
+  color:black;
+  transition: all 1s linear;
+}
+
+.cp2 #check2:checked~div {
+  height: 0;
+  color: white;
+}
+
+
+#check3{
+  display: none;
+}
+
+.cp3 div {
+  height: 500px;
+  overflow: hidden;
+  color:black;
+  transition: all 1s linear;
+}
+
+.cp3 #check3:checked~div {
+  height: 0;
+  color: white;
+}
 
 html{
     scroll-behavior: smooth;
